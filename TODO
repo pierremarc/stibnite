@@ -1,0 +1,28 @@
+#TODO Anne
+
+*Struct*
+#- home
+#- list Now
+- single Now
+#- single Wrk
+#- Pages
+
+*Serveur side*
+# - faire les liens menu
+- ajouter une possibilité de fermer manuellement la fenêtre "up"
+
+
+*Style*
+- (et peut être réduire largeur du "up")
+- remettre filets
+
+*Javascript*
+#- dégager la fenêtre up quand on plonge sur un wrk
+#- dégager la fenêtre up quand on plonge sur un wrk
+- zoom sur détails image wrk : lien vers haute def ? lien vers vue full screen dans le dessin ?
+
+*WP
+# les images ne sont pas résizées
+
+
+
