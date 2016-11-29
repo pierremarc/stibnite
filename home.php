@@ -3,13 +3,15 @@
 /**
 
     Home [home.php]
-    
+
     Author: Pierre Marchand
     Date: 2012-02-17
 
 */
 
 session_start();
+output_file_marker(__FILE__);
+
 get_header();
 get_sidebar();
 
@@ -37,7 +39,7 @@ get_template_part('colbox');
 	';
 	}
 }
-    
+
 ?>
 
 
@@ -46,4 +48,3 @@ get_template_part('colbox');
 <?php
 get_footer()
 ?>
-

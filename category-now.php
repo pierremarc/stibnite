@@ -3,21 +3,23 @@
 /**
 
     Now [category-now.php]
-    
+
     Author: Pierre Marchand
     Date: 2012-02-17
 
 */
 
+output_file_marker(__FILE__);
+
 $ret_array = array();
 
 if(have_posts() )
-{ 
+{
     $first = ' post-item-first';
     while(have_posts())
     {
         the_post();
-        
+
 	$ret_str = "";
 	$date = new DateTime($post->post_date);
         $ret_str .= '<div class="post-item'.$first.'">';
@@ -29,8 +31,8 @@ if(have_posts() )
                 <div class="post-date-month">'.$month.'&nbsp;―</div>
                 <div class="post-date-year">'.$year.'</div>';
         $ret_str .= '</div>';
-        
-        if ( has_post_thumbnail() ) 
+
+        if ( has_post_thumbnail() )
         {
             $ret_str .= get_the_post_thumbnail($post->ID, 'medium');
         }
@@ -38,9 +40,9 @@ if(have_posts() )
         $ret_str .= get_the_content();
 	$ret_str .= '</div>';
 	$ret_str .= '</div>';
-        
+
         $first = '';
-        
+
         array_push($ret_array, $ret_str);
     }
 }
@@ -76,14 +78,14 @@ if($wp_query->is_paged != 1)
 						$("html,body").animate({scrollTop : target_top}, 1000);
 						}
 				});
-				
+
 			});
-		
+
 		var body = $("body");
 		body.append(more_box);
 		body.append(more);
 		});
-		
+
 	</script>';
 
 
@@ -93,5 +95,3 @@ else
 {
 	echo json_encode($ret_array);
 }
-
-

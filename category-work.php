@@ -3,18 +3,20 @@
 /**
 
     Works [category-work.php]
-    
+
     Author: Pierre Marchand
     Date: 2012-02-17
 
 */
+
+output_file_marker(__FILE__);
 
 get_header();
 get_sidebar();
 
 
 if(have_posts() )
-{ 
+{
     $first = ' post-item-first';
     while(have_posts())
     {
@@ -29,16 +31,16 @@ if(have_posts() )
                 <div class="post-date-month">'.$month.'&nbsp;―</div>
                 <div class="post-date-year">'.$year.'</div>';
         echo '</div>';
-        
-        if ( has_post_thumbnail() ) 
+
+        if ( has_post_thumbnail() )
         {
             the_post_thumbnail('medium');
-        } 
+        }
         echo '<div class="post-item-content">';
         the_content();
 	echo '</div>';
 	echo '</div>';
-        
+
         $first = '';
     }
 }
